@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lirik Lagu Seventeen - Kemarin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p span {
+            opacity: 0;
+            display: inline-block;
+            transition: opacity 1s ease-in-out;
+        }
+        audio {
+            margin-top: 20px;
+            outline: none;
+            width: 80%;
+        }
+        button {
+            padding: 10px 20px;
+            background: #444;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        button:hover {
+            background: #666;
+        }
+    </style>
+    <script>
+        function tampilkanLirik() {
+            let teks = document.querySelectorAll('p span');
+            let audio = document.getElementById('lagu');
+            audio.play();
+            teks.forEach((kata, index) => {
+                setTimeout(() => {
+                    kata.style.opacity = 1;
+                }, index * 2000);
+            });
+            document.querySelector('button').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <h1>Seventeen - Kemarin </h1>
+    <button onclick="tampilkanLirik()">Tampilkan Lirik</button>
+    <p>
+        <span>bersamamu</span><br><br>
+        <span>Kemarin</span> <span>dunia</span> <span>terlihat</span> <span>sangat</span> <span>indah</span><br>
+        <span>Dan</span> <span>denganmu</span> <span>merasakan</span> <span>ini semua</span><br>
+        <span>Melewati</span> <span>hitam</span> <span>putih</span> <span>hidup</span> <span>ini</span><br>
+        <span>Bersamamu,</span> <span>bersamamu</span><br><br>
+        <span>Kini</span>
+    </p>
+    <audio id="lagu" src="https://h.top4top.io/m_3350e8sfu0.mp3" preload="auto"></audio>
+</body>
+</html>
