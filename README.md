@@ -1,0 +1,2 @@
+# amoyz-lirik
+by amoyz
